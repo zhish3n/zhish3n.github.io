@@ -4,6 +4,7 @@ title:  "Garage System and Remote Control"
 date:   2018-02-05 18:19:25 +0800
 permalink: "/mock-garage-remote-control"
 description: Controlling a garage system with a synchronized web app and mobile app.
+tags: iot ionic particle
 # permalink: /:categories/:year/:month
 ---
 

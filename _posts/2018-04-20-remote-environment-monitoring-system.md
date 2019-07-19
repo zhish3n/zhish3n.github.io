@@ -5,6 +5,7 @@ date:   2018-04-20 18:19:25 +0800
 permalink: "/remote-environment-monitoring-system"
 author: Zachary Yong
 description: Remote humidity and temperature monitoring system that uses LoRaWAN technology to upload and display longitudinal environmental data.
+tags: iot particle pubsub
 # always put title, description, author
 ---
 
