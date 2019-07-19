@@ -37,6 +37,7 @@ show_downloads: true
 logo: /assets/img/logo.png
 unofficial_transcript: /assets/img/unofficial_transcript.pdf
 resume: /assets/img/ZhiShenYongResume.pdf
+favicon: /assets/img/favicon.ico
 
 # SEO
 author: Zhi Shen Yong

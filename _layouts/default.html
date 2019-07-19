@@ -6,7 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta itemprop="description" name="description" content="{% if page.description %}{{ page.description | truncate: 160 }}{% else %}{{ site.description | truncate: 160  }}{% endif %}" />
 
-    
+    <title>
+      {% if page.title %}
+        {{ page.title }}
+      {% else %}
+        {{ site.title }}
+      {% endif %}
+    </title>
+
+    <link rel="icon" href="{{ site.favicon }}" type="image/x-icon">
     <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
     <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -42,7 +50,7 @@
         {% endif %} -->
 
         <p class="fl_a fl_c">
-          <a href="https://github.com/ZhiSh3n">GitHub</a> &nbsp;| &nbsp;
+          <a href="https://github.com/zhish3n">GitHub</a> &nbsp;| &nbsp;
           <a href="https://www.linkedin.com/in/zhi-shen-yong-451985144/">LinkedIn</a>
         </p>
 
