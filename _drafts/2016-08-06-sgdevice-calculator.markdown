@@ -1,8 +1,10 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
-date:   2019-07-19 11:30:09 -0500
-categories: jekyll update
+title:  "SGDevice Calculator"
+date:   2016-08-06 18:19:25 +0800
+permalink: "/sgdevice"
+description: Command-line application used to calculate particle spin probability values. Built with Java.
+# permalink: /:categories/:year/:month
 ---
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 
