@@ -1,9 +1,10 @@
 ---
 layout: post
-title:  "Simultaneous KeyPress"
-date:   2016-04-15 18:19:25 +0800
-permalink: "/keypress"
-description: A simple but efficient template for multiple-key registration in Java. Includes a randomized platformer environment for testing.
+title:  "SGDevice Calculator"
+date:   2016-08-06 18:19:25 +0800
+permalink: "/sgdevice"
+sitemap: false
+description: Command-line application used to calculate particle spin probability values. Built with Java.
 # permalink: /:categories/:year/:month
 ---
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.

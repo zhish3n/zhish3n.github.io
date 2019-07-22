@@ -1,9 +1,10 @@
 ---
 layout: post
-title:  "JS Calendar"
-date:   2017-08-21 18:19:25 +0800
-permalink: "/jscalendar"
-description: Scalable calendar platform featuring no redirects. Built with AJAX and PHP. Requires a RDMS to function. Web application security is implemented.
+title:  "Simultaneous KeyPress"
+date:   2016-04-15 18:19:25 +0800
+permalink: "/keypress"
+sitemap: false
+description: A simple but efficient template for multiple-key registration in Java. Includes a randomized platformer environment for testing.
 # permalink: /:categories/:year/:month
 ---
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.

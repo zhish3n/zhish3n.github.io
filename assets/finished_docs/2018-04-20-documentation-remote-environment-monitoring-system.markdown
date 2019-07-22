@@ -3,6 +3,7 @@ layout: post
 title:  "Documentation: Remote Environment Monitoring System"
 date:   2018-04-20 18:19:25 +0800
 permalink: "/docrems"
+sitemap: false
 author: Zachary Yong
 description: Solar-powered, long-distance humidity and temperature monitoring system. Uses LoRaWAN technology to upload and display longitudinal environmental data.
 # always put title, description, author

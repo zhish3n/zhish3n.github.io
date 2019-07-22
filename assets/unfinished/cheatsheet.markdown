@@ -3,6 +3,7 @@ layout: post
 title:  "Hello World!"
 date:   2018-05-20 18:19:25 +0800
 categories: jekyll update
+sitemap: false
 permalink: "/sheet"
 ---
 

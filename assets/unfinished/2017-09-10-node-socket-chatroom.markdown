@@ -1,9 +1,10 @@
 ---
 layout: post
-title:  "SGDevice Calculator"
-date:   2016-08-06 18:19:25 +0800
-permalink: "/sgdevice"
-description: Command-line application used to calculate particle spin probability values. Built with Java.
+title:  "Asynchronous ChatRoom"
+date:   2017-09-10 18:19:25 +0800
+permalink: "/chatroom"
+sitemap: false
+description: Real-time, bi-directional communication platform built with Node.js and Socket.IO. Does not use a RDMS. Web application security is implemented.
 # permalink: /:categories/:year/:month
 ---
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.

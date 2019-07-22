@@ -3,6 +3,7 @@ layout: post
 title:  "Documentation: Mock Garage and Remote Control"
 date:   2018-02-05 18:19:25 +0800
 permalink: "/docgaragecontrol"
+sitemap: false
 description: Combining Particle API's IOT functionality with Ionic and Cordova. Implementation of Pub/Sub techniques to control a garage door with multiple clients.
 # permalink: /:categories/:year/:month
 ---
