@@ -3,7 +3,7 @@ layout: post
 title:  "Asymmetric Encryption with ECC Key Pairs"
 date:   2019-06-13 18:19:25 +0800
 permalink: "/ecc-asymmetric-encryption"
-description: An example (in Java) of asymmetric encryption/decryption using ECC key pairs and the ECDH key agreement protocol.
+description: A tutorial (in Java) on asymmetric encryption/decryption using ECC key pairs and the ECDH key agreement protocol.
 tags: cryptography ecc java
 # permalink: /:categories/:year/:month
 ---
