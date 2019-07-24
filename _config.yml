@@ -16,12 +16,12 @@
 title: Zhi Shen Yong
 email: zhishenyong@live.com
 description: >- # this means to ignore newlines until "baseurl:"
-  My name is Zhi Shen Yong and I am a software developer. Here you can 
+  My name is Zhi Shen Yong and I am a software developer. Here you can
   find a few of the projects I have worked on in the past. Please feel
   free to contact me for any additional information.
 # baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://zhishenyong.com" # the base hostname & protocol for your site, e.g. http://example.com
-# twitter_username: 
+# twitter_username:
 github_username: zhish3n
 
 # Build settings
@@ -33,7 +33,7 @@ plugins:
   - jekyll-sitemap
 
 # Minimal Theme
-show_downloads: true
+show_downloads: false
 logo: /assets/img/logo.png
 unofficial_transcript: /assets/img/unofficial_transcript.pdf
 resume: /assets/img/ZhiShenYongResume.pdf
