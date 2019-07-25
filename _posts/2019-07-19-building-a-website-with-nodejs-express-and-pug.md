@@ -118,7 +118,9 @@ app.get('/', (req, res) => {
 });
 ```
 
-Now, when a user navigates to `localhost:8080`, instead of sending them the String `Hello World!`, we now send them the rendered `index.pug` file.
+Now, when a user navigates to `localhost:8080`, instead of sending them the String `Hello World!`, we now send them the rendered `index.pug` file. If you navigate to `localhost:8080`, you should see something like this:
+
+![static-init-website](/assets/img/building-a-website-with-nodejs-express-and-pug/static-init-website.png)
 
 And that's all there is to setting up a simple static website with Node.js, Express, and Pug! The section below has more information on building more complex static websites with Pug, but if you are already comfortable with this material, feel free to [check out my post](#) on how to add asynchronous dynamic functionality to our website using jQuery and Ajax.
 
