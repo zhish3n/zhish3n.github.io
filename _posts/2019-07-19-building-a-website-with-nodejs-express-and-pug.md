@@ -122,7 +122,7 @@ Now, when a user navigates to `localhost:8080`, instead of sending them the Stri
 
 ![static-init-website](/assets/img/building-a-website-with-nodejs-express-and-pug/static-init-website.png)
 
-And that's all there is to setting up a simple static website with Node.js, Express, and Pug! The section below has more information on building more complex static websites with Pug, but if you are already comfortable with this material, feel free to [check out my post](#) on how to add asynchronous dynamic functionality to our website using jQuery and Ajax.
+And that's all there is to setting up a simple static website with Node.js, Express, and Pug! The section below has more information on building more complex static websites with Pug, but if you are already comfortable with this material, feel free to [check out my post](./adding-client-side-dynamic-functionality-to-nodejs-websites) on how to add client-side asynchronous dynamic functionality to our website using jQuery.
 
 #### Further Reading
 
@@ -225,4 +225,4 @@ If you refresh the page, you should now see a simple list of items in the middle
 
 ![static-grocery-website](/assets/img/building-a-website-with-nodejs-express-and-pug/static-grocery-website.png)
 
-Now that we know how to build and serve more complex static websites using Node.js, Express, and Pug, the next step is to add dynamic functionality to our website so that the user can interact with the website to some degree. To learn how to do this, [check out my post](#) on how to add asynchronous dynamic functionality to our website using jQuery and Ajax.
+Now that we know how to build and serve more complex static websites using Node.js, Express, and Pug, the next step is to add dynamic functionality to our website so that the user can interact with the website to some degree. To learn how to do this, [check out my post](./adding-client-side-dynamic-functionality-to-nodejs-websites) on how to add client-side asynchronous dynamic functionality to our website using jQuery.
