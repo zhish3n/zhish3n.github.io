@@ -8,7 +8,7 @@ tags: node jquery javascript
 # permalink: /:categories/:year/:month
 ---
 
-In this project, we will be adding asynchronous dynamic functionality to the static Node.js website we built in this [last project](./building-a-website-with-nodejs-express-and-pug).
+In this project, we will be adding asynchronous client-side dynamic functionality to the static Node.js website we built in this [last project](./building-a-website-with-nodejs-express-and-pug).
 
 In contrast to static websites, dynamic websites have the ability to update or change their content using scripting languages like JavaScript. *Asynchronous* dynamic websites can perform content updates without requiring the page to be refreshed.
 
@@ -41,7 +41,7 @@ div(class='row')
 
 If you refresh your page, you should see that a text field and a button has been added to your card header of your grocery list. It should look something like this:
 
-![dynamic-grocery-website-client](/assets/img/adding-dynamic-functionality-to-nodejs-websites/dynamic-grocery-website-client.png)
+![dynamic-grocery-website-client](/assets/img/adding-client-side-dynamic-functionality-to-nodejs-websites/dynamic-grocery-website-client.png)
 
 Pressing the button does nothing at the moment. Let's change that. Observe in the code above that we assigned an `id` of `new-item-button` to the button. Similarly, we assigned an `id` of `new-item-field` to the text field.
 
@@ -90,8 +90,8 @@ Notice that now whenever we click the button, we call the `append()` function on
 
 Upon refreshing the page, you should now be able to write something in the text field, press the button, and see it appear asynchronously on the end of your grocery list.
 
-![dynamic-grocery-website-client-2](/assets/img/adding-dynamic-functionality-to-nodejs-websites/dynamic-grocery-website-client-2.png)
+![dynamic-grocery-website-client-2](/assets/img/adding-client-side-dynamic-functionality-to-nodejs-websites/dynamic-grocery-website-client-2.png)
 
-At this point, our website is now fitted with client-side dynamic functionality. Client-side dynamic functionality is distinct from server-side dynamic functionality in the sense that dynamically updated information is not stored across sessions; if you refresh the page, you'll see that the items you added to the grocery list disappear.
+At this point, our website is now fitted with client-side dynamic functionality. Client-side dynamic functionality is distinct from server-side dynamic functionality in the sense that dynamically updated information is not stored across client sessions; if you refresh the page, you'll see that the items you added to the grocery list disappear.
 
-To retain dynamically updated information across server sessions, we need to add server-side dynamic functionality. To learn how to do this, check out my post on adding server-side dynamic functionality to Node.js websites [here](#).
+To retain dynamically updated information across client sessions, we need to add server-side dynamic functionality. To learn how to do this, check out my post on adding server-side dynamic functionality to Node.js websites [here](./adding-server-side-dynamic-functionality-to-nodejs-websites).

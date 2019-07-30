@@ -225,4 +225,4 @@ If you refresh the page, you should now see a simple list of items in the middle
 
 ![static-grocery-website](/assets/img/building-a-website-with-nodejs-express-and-pug/static-grocery-website.png)
 
-Now that we know how to build and serve more complex static websites using Node.js, Express, and Pug, the next step is to add dynamic functionality to our website so that the user can interact with the website to some degree. To learn how to do this, [check out my post](./adding-client-side-dynamic-functionality-to-nodejs-websites) on how to add client-side asynchronous dynamic functionality to our website using jQuery.
+Now that we know how to build and serve more complex static websites using Node.js, Express, and Pug, the next step is to add dynamic functionality to our website so that the user can interact with the website. To learn how to do this, [check out my post](./adding-client-side-dynamic-functionality-to-nodejs-websites) on how to add client-side asynchronous dynamic functionality to our website using jQuery.
