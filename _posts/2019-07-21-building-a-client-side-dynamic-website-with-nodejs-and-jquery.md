@@ -1,14 +1,14 @@
 ---
 layout: post
-title:  "Adding Client-Side Dynamic Functionality to Node.js Websites"
+title:  "Building a Client-Side Dynamic Website with Node.js and jQuery"
 date:   2019-07-21 18:19:25 +0800
-permalink: "/adding-client-side-dynamic-functionality-to-nodejs-websites"
+permalink: "/building-a-client-side-dynamic-website-with-nodejs-and-jquery"
 description: A tutorial on how to add asynchronous client-side dynamic functionality to Node.js web applications using jQuery.
 tags: node jquery javascript
 # permalink: /:categories/:year/:month
 ---
 
-In this project, we will be adding asynchronous client-side dynamic functionality to the static Node.js website we built in this [last project](./building-a-website-with-nodejs-express-and-pug).
+In this project, we will be adding asynchronous client-side dynamic functionality to the static Node.js website we built in this [last project](./building-a-static-website-with-nodejs-express-and-pug).
 
 In contrast to static websites, dynamic websites have the ability to update or change their content using scripting languages like JavaScript. *Asynchronous* dynamic websites can perform content updates without requiring the page to be refreshed.
 
@@ -94,4 +94,4 @@ Upon refreshing the page, you should now be able to write something in the text 
 
 At this point, our website is now fitted with client-side dynamic functionality. Client-side dynamic functionality is distinct from server-side dynamic functionality in the sense that dynamically updated information is not stored across client sessions; if you refresh the page, you'll see that the items you added to the grocery list disappear.
 
-To retain dynamically updated information across client sessions, we need to add server-side dynamic functionality. To learn how to do this, check out my post on adding server-side dynamic functionality to Node.js websites [here](./adding-server-side-dynamic-functionality-to-nodejs-websites).
+To retain dynamically updated information across client sessions, we need to add server-side dynamic functionality. To learn how to do this, check out my post on adding server-side dynamic functionality to Node.js websites [here](./building-a-server-side-dynamic-website-with-nodejs-jquery-and-ajax).

@@ -1,14 +1,14 @@
 ---
 layout: post
-title:  "Adding Server-Side Dynamic Functionality to Node.js Websites"
+title:  "Building a Server-Side Dynamic Website With Node.js, jQuery, and Ajax"
 date:   2019-07-25 18:19:25 +0800
-permalink: "/adding-server-side-dynamic-functionality-to-nodejs-websites"
+permalink: "/building-a-server-side-dynamic-website-with-nodejs-jquery-and-ajax"
 description: A tutorial on how to add asynchronous server-side dynamic functionality to Node.js web applications using jQuery and Ajax.
 tags: node jquery ajax
 # permalink: /:categories/:year/:month
 ---
 
-In this project, we will be adding asynchronous server-side dynamic functionality to the client-side dynamic Node.js website we built in this [last project](./adding-client-side-dynamic-functionality-to-nodejs-websites).
+In this project, we will be adding asynchronous server-side dynamic functionality to the client-side dynamic Node.js website we built in this [last project](./building-a-client-side-dynamic-website-with-nodejs-and-jquery).
 
 Client-side asynchronous dynamic websites have the ability to perform content updates without requiring the page to be refreshed. The issue is that these updates are not stored across client sessions. This means that whenever we refresh the page, all of our content updates are lost. To combat this issue, we can implement server-side dynamic functionality, which is where all the data the user manipulates is stored on the server rather than on the client-side web browser.
 
@@ -199,4 +199,4 @@ After refreshing the web page, you should see a populated `ul` element, which is
 
 In this project, we have added server-side dynamic functionality to our grocery list website. This means that our grocery list is now stored on the server rather than on the client. Using Ajax, we are able to fetch the list from the server, as well as allow the user to  add items to the server list and have their client DOM update asynchronously.
 
-Server-side dynamic functionality is more useful than client-side dynamic functionality since updated information persists across client sessions. However, this information does not persist across server sessions, meaning that if we stop and restart the Node.js server, the grocery list will be reset to just three items -- Apples, Bread, and Spaghetti. To retain information across server sessions we will need to connect the Node.js server to a database of some kind. To learn how to do this, check out my post on how to connect a Node.js website to a MySQL database [here](#).
+Server-side dynamic functionality is more useful than client-side dynamic functionality since updated information persists across client sessions. However, this information does not persist across server sessions, meaning that if we stop and restart the Node.js server, the grocery list will be reset to just three items -- Apples, Bread, and Spaghetti. To retain information across server sessions we will need to connect the Node.js server to a database of some kind. To learn how to do this, check out my post on how to connect a Node.js website to a MySQL database [here](/building-a-dynamic-website-with-nodejs-and-mysql).
