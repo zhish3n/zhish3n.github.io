@@ -25,15 +25,20 @@
     <div class="wrapper">
       <header>
         <h1><a href="{{ "/" | absolute_url }}">{{ site.title | default: site.github.repository_name }}</a></h1>
-        
+
         {% if site.logo %}
           <img src="{{ site.logo | relative_url}}" alt="Logo" />
         {% endif %}
 
         <p class='fl_a'>{{ site.description }}</p>
 
+        <!--
         <p class="fl_a fl_b">
           <a href="#">zyong@wustl.edu</a> &nbsp;| &nbsp; <a href="#">(314) 680-6805</a>
+        </p>
+        -->
+        <p class="fl_a fl_b">
+          <a href="#">zyong@wustl.edu</a> &nbsp;
         </p>
         <p class="fl_a fl_b">
 
