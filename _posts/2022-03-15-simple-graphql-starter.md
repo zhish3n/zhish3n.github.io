@@ -3,8 +3,8 @@ layout: post
 title:  "Simple GraphQL Starter"
 date:   2022-03-15 18:19:25 +0800
 permalink: "/simple-graphql-starter"
-description: Creating a lightweight starter Spring service using the GraphQL Java library.
-tags: java graphql spring starter
+description: A tutorial on creating a lightweight Spring service using the GraphQL Java library.
+tags: java graphql spring service
 # permalink: /:categories/:year/:month
 ---
 
@@ -24,7 +24,7 @@ compileOnly "org.projectlombok:lombok:1.18.16"
 annotationProcessor "org.projectlombok:lombok:1.18.16"
 ```
 
-- The first dependency is the core GraphQL Java library. 
+- The first dependency is the core [GraphQL Java library](https://www.graphql-java.com/). 
 The dependency after that is an addon library that will help us get the GraphQL starter service up and running easier.
 - The Guava dependency allows us to create some dummy data objects we will return in our starter service.
 - Lombok allows us to add certain annotations to reduce boilerplate code. 
@@ -33,10 +33,6 @@ Set up the GraphQL schema in `src/main/resources` called `schema.graphqls`.
 It should contain the following code.
 
 ```
-schema {
-    query: Query
-}
-
 type Query {
     parent(id: ID): Parent
 }
@@ -53,11 +49,27 @@ type Child {
 }
 ```
 
-In this schema we are defining one object that our GraphQL service can return–– the `Parent` object, containing an `id`, a `name`, and a `child`.
-The `Child` object returned from a `Parent` object contains an `id` and a `name`.
-By including the `Parent` object in `type Query`, we are making it queryable through `parent` (more info on this later on).
+We are doing a few things in this schema.
+First, we're defining the base query (or queries) that we can make to our GraphGL service.
+We do this by including the name of the query, followed by the input it takes, followed by the type it returns, into `type Query`.
+In our project this is precisely `parent(id: ID): Parent`.
+This allows us to query for a `Parent` object, containing an `id`, a `name`, and a `Child` object by making a query like this:
 
-Next, create a folder called `resolvers` in `src/main/java`.
+```
+{
+    parent(id: "someId") {
+        id
+        name
+    }
+}
+```
+
+We need to define the `Parent` object that is returned, which is what the second block of code in the schema does.
+We've included a `Child` object in the `Parent` object, which we define in the third and last block of code in the `schema.graphqls` file.
+Because we haven't included a `child` method in `type Query`, getting a `Child` object by itself from a base GraphQL query won't be possible.
+The only way we can get a `Child` object will be through querying the `Parent` that holds that `Child`.
+
+Next, create a folder called `resolver` in `src/main/java`.
 In it, create two classes called `ParentResolver` and `ChildResolver`.
 The classes should look like this (respectively).
 
@@ -121,8 +133,8 @@ public class ChildResolver {
 ```
 
 In the first class, we are defining the method that will be called when we make the GraphQL query `parent(id)`.
-In either class, we make a dummy list of objects conforming to the model we gave those objects in `schema.graphqls`;
-We then have a method `getZZZByIdDataFetcher` that essentially gets whatever `id` we pass in the GraphQL query and tries to resolve it by finding it in the dummy list (hence, resolver).
+In either class, we have a dummy list of objects conforming to the model we gave those objects in `schema.graphqls`;
+we then have a method `getZZZByIdDataFetcher` that essentially gets whatever `id` we pass in the GraphQL query and tries to resolve it by finding it in the dummy list (hence, resolver).
 Note that in `ChildResolver`, since the resolver method is not called from the base query but instead called while we are expanding a `Parent` object, we get the `childId` not through the environment but through the `Parent` object that calls the method.
 
 Next, create a new folder called `service` in `src/main/java`.
@@ -171,13 +183,11 @@ public class GraphQLService {
         )
         .build();
   }
-
 }
 ```
 
 There are a few things happening here.
 First, we're auto-wiring the resolvers we made before into this class.
-We're also creating a GraphQL instance that we will use later to execute queries we receive.
 In the `init` function (annotated with `@PostConstruct` so it automatically runs) we create a `GraphQLSchema` from the `schema.graphqls` file we created earlier and use it to build our `GraphQL` instance.
 Notice that this `init` function calls `buildSchema`, which also calls `buildWiring`.
 In `buildWiring`, we are essentially mapping queries defined in `schema.graphqls` to functions we defined in the resolver classes.
@@ -198,7 +208,7 @@ Then, run our project using `./gradlew bootRun`. If all is well, you should see 
 ```
 ...
 2022-03-15 23:23:21.100  INFO 55237 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2022-03-15 23:23:21.117  INFO 55237 --- [           main] c.c.udl.discovery.DiscoveryApplication   : Started DiscoveryApplication in 3.007 seconds (JVM running for 3.554)
+2022-03-15 23:23:21.117  INFO 55237 --- [           main] c.c.SampleApplication   : Started SampleApplication in 3.007 seconds (JVM running for 3.554)
 <==========---> 80% EXECUTING [17s]
 > :bootRun
 ```
