@@ -13,7 +13,7 @@ tags: java graphql spring h2
 In this post I go over setting up a Spring service with GraphQL and H2.
 This post should be read as a continuation of the [simple GraphQL starter post](./simple-graphql-starter), as that post goes over some basic expectations of GraphQL and in this post we'll be building off some concepts we explored in the other post.
 
-First, use [Spring Initializr](https://start.spring.io/) to kickstart setting up a new Spring project.
+First, use [Spring Initializr](https://start.spring.io/) to kickstart setting up a new Spring Boot project.
 Use the settings Gradle, Java 8 (I am using [Amazon Corretto 8](https://docs.aws.amazon.com/corretto/latest/corretto-8-ug/downloads-list.html)), and Spring Boot 2.6.4.
 In the `build.gradle` of the new project, add these dependencies:
 
@@ -31,7 +31,7 @@ annotationProcessor "org.projectlombok:lombok:1.18.16"
 - The third and fourth dependencies are add-ons to the base GraphQL Java library that introduce some cool features.
 - Lombok allows us to add certain annotations to reduce boilerplate code.
 
-Set up the GraphQL schema in `src/main/resources/graphql` called `schema.graphqls`.
+Set up the GraphQL schema in `src/main/resources/graphql/` called `schema.graphqls`.
 It should contain the following code.
 
 ```
@@ -57,7 +57,7 @@ the `Child` object is not exposed here so we will only be able to get `Child` da
 Notice the exclamation marks `!` used in the schema;
 these indicate where a field is required–– so in our case, a `Parent` must have an `id` and `name`.
 
-Next, create a folder called `resolver` in `src/main/java`.
+Next, create a folder called `resolver` in `src/main/java/`.
 In it, create two classes called `ParentQueryResolver` and `ParentResolver`.
 They should look like this:
 
@@ -102,7 +102,7 @@ In the `ParentResolver`, we take a `Parent` as an input and return the result of
 You may observe that these methods are analogous to the `DataFetcher` methods from the other post, and you would be correct;
 we will touch on this similarity in a later section.
 
-Create a new folder called `repository` in `src/main/java`.
+Create a new folder called `repository` in `src/main/java/`.
 Create two Java interfaces named `ParentRepository` and `ChildRepository` in that folder.
 The (very bare) contents of those interfaces should be as follows:
 
@@ -116,7 +116,7 @@ public interface ChildRepository extends JpaRepository<Child, String> {
 }
 ```
 
-Also create a new folder called `model` in `src/main/java` and two files in that folder called `Parent` and `Child`.
+Also create a new folder called `model` in `src/main/java/` and two files in that folder called `Parent` and `Child`.
 The contents of those classes should be:
 
 ```java
@@ -153,7 +153,7 @@ public class Child {
 These classes define the objects that will be returned by the Jpa repositories.
 They are annotated in such a way that upon starting the Spring service H2 will automatically create tables capable of holding objects with these definitions.
 
-Create a file called `data.sql` in `src/main/resources`:
+Create a file called `data.sql` in `src/main/resources/`:
 
 ```
 insert into parent (id, name) values ('f563e845-da10-46e7-875e-340595a07ecc', 'Test1', 'd668de84-554b-4017-853b-d089fb644542');
@@ -191,7 +191,7 @@ spring:
 And that's it! That's all it takes to set up our Spring service with GraphQL Java and H2.
 You might notice that, unlike in the project we built in the last post, we don't have a `service` class here.
 Additionally, we don't have the `buildWiring()` method where we're wiring together our `resolver` methods with GraphQL query commands.
-That is because [GraphQL Java Tools](https://github.com/graphql-java-kickstart/graphql-java-tools) actually does this for us automatically.
+That is because [GraphQL Java Tools](https://github.com/graphql-java-kickstart/graphql-java-tools) does this for us automatically.
 Recall the query resolver classes we wrote earlier, and how they were sort-of analogous to the `DataFetcher`-returning resolvers from the other project.
 Here, a class implementing `GraphQLQueryResolver` is treated as defining some method included in `type Query`.
 GraphQL Java Tools looks for a method with the same name and taking the same input (in our case, `parent`) to "wire" with the GraphQL query command.

@@ -53,7 +53,7 @@ The screenshot above shows **Login Page**, whose only purpose is to make sure th
 
 The screenshot above shows the **Control Panel Page**.
 * The **Control Panel Page** gives users the option to toggle the garage door (which equivalent to pressing the real garage door button), to toggle the garage light manually, or to navigate to advanced options.
-* With the use of publish/subscribe techniques, this page always display an updated status of the garage door and garage light. For instance, upon opening the web app for the first time, the web app will fetch the current status of the garage system rather of displaying default values.
+* With the use of publish/subscribe techniques, this page always displays an updated status of the garage door and garage light. For instance, upon opening the web app for the first time, the web app will fetch the current status of the garage system rather of displaying default values.
 * Every action made on the web app is first relayed to the garage system microprocessor; upon performing a successful action, the garage system microprocessor then relays a message back to the web app telling it to update.
 
 

@@ -12,7 +12,7 @@ tags: java graphql spring service
 
 In this post I go over setting up a simple Spring service with GraphQL.
 
-First, use [Spring Initializr](https://start.spring.io/) to kickstart setting up a new Spring project.
+First, use [Spring Initializr](https://start.spring.io/) to kickstart setting up a new Spring Boot project.
 Use the settings Gradle, Java 8 (I am using [Amazon Corretto 8](https://docs.aws.amazon.com/corretto/latest/corretto-8-ug/downloads-list.html)), and Spring Boot 2.6.4. 
 In the `build.gradle` of the new project, add a few essential dependencies:
 
@@ -29,7 +29,7 @@ The dependency after that is an addon library that will help us get the GraphQL 
 - The Guava dependency allows us to create some dummy data objects we will return in our starter service.
 - Lombok allows us to add certain annotations to reduce boilerplate code. 
 
-Set up the GraphQL schema in `src/main/resources` called `schema.graphqls`.
+Set up the GraphQL schema in `src/main/resources/` called `schema.graphqls`.
 It should contain the following code.
 
 ```
@@ -45,7 +45,7 @@ type Parent {
 
 type Child {
     id: ID
-    name: name
+    name: String
 }
 ```
 
@@ -53,7 +53,7 @@ We are doing a few things in this schema.
 First, we're defining the base query (or queries) that we can make to our GraphGL service.
 We do this by including the name of the query, followed by the input it takes, followed by the type it returns, into `type Query`.
 In our project this is precisely `parent(id: ID): Parent`.
-This allows us to query for a `Parent` object, containing an `id`, a `name`, and a `Child` object by making a query like this:
+We can query for a `Parent` object, containing an `id`, a `name`, and a `Child` object by making a query like this:
 
 ```
 {
@@ -69,7 +69,7 @@ We've included a `Child` object in the `Parent` object, which we define in the t
 Because we haven't included a `child` method in `type Query`, getting a `Child` object by itself from a base GraphQL query won't be possible.
 The only way we can get a `Child` object will be through querying the `Parent` that holds that `Child`.
 
-Next, create a folder called `resolver` in `src/main/java`.
+Next, create a folder called `resolver` in `src/main/java/`.
 In it, create two classes called `ParentResolver` and `ChildResolver`.
 The classes should look like this (respectively).
 
@@ -137,7 +137,7 @@ In either class, we have a dummy list of objects conforming to the model we gave
 we then have a method `getZZZByIdDataFetcher` that essentially gets whatever `id` we pass in the GraphQL query and tries to resolve it by finding it in the dummy list (hence, resolver).
 Note that in `ChildResolver`, since the resolver method is not called from the base query but instead called while we are expanding a `Parent` object, we get the `childId` not through the environment but through the `Parent` object that calls the method.
 
-Next, create a new folder called `service` in `src/main/java`.
+Next, create a new folder called `service` in `src/main/java/`.
 Create a Java class named `GraphQLService` in that folder.
 The contents of that class should be as follows:
 
