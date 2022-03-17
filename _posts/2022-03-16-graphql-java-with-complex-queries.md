@@ -797,7 +797,7 @@ We're asking for a `Parent` object with `name = "parent1"` and `secondaryId = "4
 If we removed the `name` field from the query, we would get an identical result to the `parentBySecondaryId` query, as in both queries we end up asking for `Parent` objects with `secondaryId = "453b631f-b068-4630-bda4-930571e689c2"` which there are two of.
 
 That's all for this post!
-Today, we set up a GraphQL service in Spring utilizing concepts like `DataLoader`s to ensure our queries are responsive and efficient.
+Today, we set up a GraphQL service in Spring utilizing concepts like `DataLoader`s to ensure our queries are responsive and efficient (inspired by [this sample project](https://github.com/graphql-java/graphql-java-examples/tree/master/http-example)).
 We also looked at implementing more complex queries, like `getByAnyField` and `getByInputType/getByMultipleFields`.
 As for where to go from here?
 
