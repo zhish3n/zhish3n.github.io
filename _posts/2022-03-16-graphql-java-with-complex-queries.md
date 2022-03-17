@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Efficient Complex Queries in GraphQL Java"
-date:   2022-03-22 18:19:25 +0800
+date:   2022-03-16 18:19:25 +0800
 permalink: "/efficient-complex-queries-graphql-java"
 description: A tutorial on implementing complex queries and efficient practices in GraphQL Java.
 tags: java graphql spring

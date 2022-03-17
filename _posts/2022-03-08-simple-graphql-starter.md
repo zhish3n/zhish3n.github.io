@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Simple GraphQL Starter"
-date:   2022-03-15 18:19:25 +0800
+date:   2022-03-08 18:19:25 +0800
 permalink: "/simple-graphql-starter"
 description: A tutorial on creating a lightweight Spring service using the GraphQL Java library.
 tags: java graphql spring service

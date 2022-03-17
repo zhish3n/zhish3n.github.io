@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "GraphQL Java and Spring with Databases"
-date:   2022-03-18 18:19:25 +0800
+date:   2022-03-12 18:19:25 +0800
 permalink: "/graphql-java-spring-database"
 description: A tutorial on building a GraphQL Java service in Spring with an H2 database.
 tags: java graphql spring h2
